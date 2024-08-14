@@ -869,71 +869,66 @@ class DashboardState extends State<Dashboard> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  GestureDetector(
-                                      onTap: () {
-                                        setState(() {
-                                          isChecked[0] = !isChecked[0];
-                                        });
-                                      },
-                                      child: Row(
-                                        children: [
-                                          Padding(
-                                            padding: const EdgeInsets.only(
-                                                left: 40, top: 10),
-                                            child: Checkbox(
-                                                checkColor:
-                                                    const Color.fromARGB(
-                                                        255, 152, 205, 248),
-                                                value: isChecked[0],
-                                                onChanged: (value) {
-                                                  setState(() {
-                                                    isChecked[0] = value!;
-                                                  });
-                                                }),
-                                          ),
-                                          ProjectTile(
-                                              isChecked: isChecked[0],
-                                              projectName: 'Rental app Design',
-                                              estimateDate: '07Mars-30Mars',
-                                              projectStatus: 'Ongoing',
-                                              projectType: 'Product Design',
-                                              projetRate: 50000,
-                                              team: teams),
-                                        ],
-                                      )),
-                                  GestureDetector(
-                                      onTap: () {
-                                        setState(() {
-                                          isChecked[1] = !isChecked[1];
-                                        });
-                                        print('CHecked :${isChecked[1]}');
-                                      },
-                                      child: Row(
-                                        children: [
-                                          Padding(
-                                            padding: const EdgeInsets.only(
-                                                left: 40, top: 10),
-                                            child: Checkbox(
-                                                checkColor:
-                                                    const Color.fromARGB(
-                                                        255, 152, 205, 248),
-                                                value: isChecked[1],
-                                                onChanged: (value) {
-                                                  setState(() {
-                                                    isChecked[1] = value!;
-                                                  });
-                                                }),
-                                          ),
-                                          ProjectTile(
-                                              isChecked: isChecked[1],
-                                              projectName: 'Revamp Website',
-                                              estimateDate: '11April-20April',
-                                              projectStatus: 'in Review',
-                                              projectType: 'UX/UI Design',
-                                              projetRate: 120000,
-                                              team: teams),
-                                        ],
-                                      )),
+                                  Row(
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            left: 40, top: 10),
+                                        child: Checkbox(
+                                            checkColor: const Color.fromARGB(
+                                                255, 152, 205, 248),
+                                            value: isChecked[0],
+                                            onChanged: (value) {
+                                              setState(() {
+                                                isChecked[0] = value!;
+                                              });
+                                            }),
+                                      ),
+                                      ProjectTile(
+                                          onChangeTile: () {
+                                            setState(() {
+                                              isChecked[0] = !isChecked[0];
+                                            });
+                                          },
+                                          isChecked: isChecked[0],
+                                          projectName: 'Rental app Design',
+                                          estimateDate: '07Mars-30Mars',
+                                          projectStatus: 'Ongoing',
+                                          projectType: 'Product Design',
+                                          projetRate: 50000,
+                                          team: teams),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            left: 40, top: 10),
+                                        child: Checkbox(
+                                            checkColor: const Color.fromARGB(
+                                                255, 152, 205, 248),
+                                            value: isChecked[1],
+                                            onChanged: (value) {
+                                              setState(() {
+                                                isChecked[1] = value!;
+                                              });
+                                            }),
+                                      ),
+                                      ProjectTile(
+                                          onChangeTile: () {
+                                            setState(() {
+                                              isChecked[1] = !isChecked[1];
+                                            });
+                                          },
+                                          isChecked: isChecked[1],
+                                          projectName: 'Revamp Website',
+                                          estimateDate: '11April-20April',
+                                          projectStatus: 'in Review',
+                                          projectType: 'UX/UI Design',
+                                          projetRate: 120000,
+                                          team: teams),
+                                    ],
+                                  ),
                                 ],
                               ),
                             ))
@@ -1035,69 +1030,67 @@ class DashboardState extends State<Dashboard> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                GestureDetector(
-                                    onTap: () {
-                                      setState(() {
-                                        isChecked[0] = !isChecked[0];
-                                      });
-                                    },
-                                    child: Row(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              left: 40, top: 10),
-                                          child: Checkbox(
-                                              checkColor: const Color.fromARGB(
-                                                  255, 152, 205, 248),
-                                              value: isChecked[0],
-                                              onChanged: (value) {
-                                                setState(() {
-                                                  isChecked[0] = value!;
-                                                });
-                                              }),
-                                        ),
-                                        ProjectTile(
-                                            isChecked: isChecked[0],
-                                            projectName: 'Rental app Design',
-                                            estimateDate: '07Mars-30Mars',
-                                            projectStatus: 'Ongoing',
-                                            projectType: 'Product Design',
-                                            projetRate: 50000,
-                                            team: teams),
-                                      ],
-                                    )),
-                                GestureDetector(
-                                    onTap: () {
-                                      setState(() {
-                                        isChecked[1] = !isChecked[1];
-                                      });
-                                      print('CHecked :${isChecked[1]}');
-                                    },
-                                    child: Row(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              left: 40, top: 10),
-                                          child: Checkbox(
-                                              checkColor: const Color.fromARGB(
-                                                  255, 152, 205, 248),
-                                              value: isChecked[1],
-                                              onChanged: (value) {
-                                                setState(() {
-                                                  isChecked[1] = value!;
-                                                });
-                                              }),
-                                        ),
-                                        ProjectTile(
-                                            isChecked: isChecked[1],
-                                            projectName: 'Revamp Website',
-                                            estimateDate: '11April-20April',
-                                            projectStatus: 'in Review',
-                                            projectType: 'UX/UI Design',
-                                            projetRate: 120000,
-                                            team: teams),
-                                      ],
-                                    )),
+                                Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 40, top: 10),
+                                      child: Checkbox(
+                                          checkColor: const Color.fromARGB(
+                                              255, 152, 205, 248),
+                                          value: isChecked[0],
+                                          onChanged: (value) {
+                                            setState(() {
+                                              isChecked[0] = value!;
+                                            });
+                                          }),
+                                    ),
+                                    ProjectTile(
+                                        onChangeTile: () {
+                                          print('CHECKED : $isChecked[0]');
+                                          setState(() {
+                                            isChecked[0] = !isChecked[0];
+                                          });
+                                        },
+                                        isChecked: isChecked[0],
+                                        projectName: 'Rental app Design',
+                                        estimateDate: '07Mars-30Mars',
+                                        projectStatus: 'Ongoing',
+                                        projectType: 'Product Design',
+                                        projetRate: 50000,
+                                        team: teams),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 40, top: 10),
+                                      child: Checkbox(
+                                          checkColor: const Color.fromARGB(
+                                              255, 152, 205, 248),
+                                          value: isChecked[1],
+                                          onChanged: (value) {
+                                            setState(() {
+                                              isChecked[1] = value!;
+                                            });
+                                          }),
+                                    ),
+                                    ProjectTile(
+                                        onChangeTile: () {
+                                          setState(() {
+                                            isChecked[1] = !isChecked[1];
+                                          });
+                                        },
+                                        isChecked: isChecked[1],
+                                        projectName: 'Revamp Website',
+                                        estimateDate: '11April-20April',
+                                        projectStatus: 'in Review',
+                                        projectType: 'UX/UI Design',
+                                        projetRate: 120000,
+                                        team: teams),
+                                  ],
+                                ),
                               ],
                             ),
                           ))
