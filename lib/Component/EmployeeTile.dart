@@ -156,3 +156,51 @@ class EmployeeTile extends StatelessWidget {
         ));
   }
 }
+
+List<EmployeeTile> listTile = [
+  EmployeeTile(
+      pathImage: 'med1.jpg',
+      title: 'Mamiandrisoa Fifaliana',
+      subtitle: 'Developpeur React',
+      employeeState: true),
+  EmployeeTile(
+      pathImage: 'med2.jpg',
+      title: 'Fenohasina Jhon',
+      subtitle: 'Developpeur Flutter',
+      employeeState: true),
+  EmployeeTile(
+      pathImage: 'med11.jpg',
+      title: 'Andritiana Zo',
+      subtitle: 'Product Owner',
+      employeeState: false),
+  EmployeeTile(
+      pathImage: 'med6.jpg',
+      title: 'Valisoa Tinah',
+      subtitle: 'Informaticien',
+      employeeState: false),
+  EmployeeTile(
+      pathImage: 'med15.jpg',
+      title: 'Mamitiana Sandy',
+      subtitle: 'Ressource Humaine',
+      employeeState: true),
+  EmployeeTile(
+      pathImage: 'med9.jpg',
+      title: 'Mamiandrisoa Kanto',
+      subtitle: 'Controle de gestion',
+      employeeState: true),
+  EmployeeTile(
+      pathImage: 'med14.jpg',
+      title: 'Andonirina Fitia',
+      subtitle: 'Controle de gestion',
+      employeeState: true),
+  EmployeeTile(
+      pathImage: 'med15.jpg',
+      title: 'Kantoniaina Johane',
+      subtitle: 'Controle de gestion',
+      employeeState: true),
+  EmployeeTile(
+      pathImage: 'med9.jpg',
+      title: 'Germain Jin',
+      subtitle: 'Designer',
+      employeeState: true),
+];

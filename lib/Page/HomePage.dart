@@ -9,6 +9,7 @@ import 'package:responsive_app/Page/Reports.dart';
 import 'package:responsive_app/Page/Settings.dart';
 import 'package:responsive_app/Page/Events.dart' as Evt;
 import 'package:responsive_app/Page/Employees.dart';
+import 'package:responsive_app/data/SideBarItem_Data.dart';
 
 class RotatingWidget extends StatefulWidget {
   final Widget child;
@@ -87,105 +88,19 @@ class HomePageState extends State<HomePage> {
     }
   }
 
-  List<String> sideBarTitles = [
-    "Dashboard",
-    "Project",
-    "Messages",
-    "Events",
-    "Employees",
-    "Reports",
-    "Payments",
-    "Settings",
-  ];
-
-  List<Icon> sideBarIcons = [
-    const Icon(
-      Icons.dashboard,
-      color: Colors.white,
-    ),
-    const Icon(
-      Icons.bar_chart_sharp,
-      color: Colors.white,
-    ),
-    const Icon(
-      Icons.message,
-      color: Colors.white,
-    ),
-    const Icon(
-      Icons.event,
-      color: Colors.white,
-    ),
-    const Icon(
-      Icons.groups_3,
-      color: Colors.white,
-    ),
-    const Icon(
-      Icons.document_scanner,
-      color: Colors.white,
-    ),
-    const Icon(
-      Icons.payment,
-      color: Colors.white,
-    ),
-    const Icon(
-      Icons.settings,
-      color: Colors.white,
-    ),
-  ];
-
   List<SideBar> sideBars = [];
 
   @override
   void didChangeDependencies() {
     // TODO: implement initState
     super.didChangeDependencies();
-    selectionner = [
-      true,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-    ];
+    if (mounted) {
+      setState(() {
+        selectionner = listSelectionner;
 
-    sideBars = [
-      SideBar(
-        sideBarTitles: sideBarTitles[0],
-        sideBarIcons: sideBarIcons[0],
-        selected: selectionner[0],
-      ),
-      SideBar(
-        sideBarTitles: sideBarTitles[1],
-        sideBarIcons: sideBarIcons[1],
-        selected: selectionner[1],
-      ),
-      SideBar(
-        sideBarTitles: sideBarTitles[2],
-        sideBarIcons: sideBarIcons[2],
-        selected: selectionner[2],
-      ),
-      SideBar(
-        sideBarTitles: sideBarTitles[3],
-        sideBarIcons: sideBarIcons[3],
-        selected: selectionner[3],
-      ),
-      SideBar(
-        sideBarTitles: sideBarTitles[4],
-        sideBarIcons: sideBarIcons[4],
-        selected: selectionner[4],
-      ),
-      SideBar(
-        sideBarTitles: sideBarTitles[5],
-        sideBarIcons: sideBarIcons[5],
-        selected: selectionner[5],
-      ),
-      SideBar(
-        sideBarTitles: sideBarTitles[6],
-        sideBarIcons: sideBarIcons[6],
-        selected: selectionner[6],
-      ),
-    ];
+        sideBars = listSideBars;
+      });
+    }
   }
 
   @override
